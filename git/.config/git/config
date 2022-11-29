@@ -1,0 +1,53 @@
+[user]
+    email = code@ihavea.quest
+    name = txtsd
+    signingkey = 97C8848C2E4063CB
+[push]
+    default = simple
+    followTags = true
+[color]
+    ui = auto
+[diff]
+    algorithm = minimal
+    renames = copies
+    mnemonicprefix = true
+[core]
+    editor = nvim
+    whitespace = blank-at-eol,space-before-tab
+[protocol]
+    version = 2
+[gpg]
+    program = gpg2
+[commit]
+    gpgsign = true
+[format]
+    signOff = yes
+[init]
+    defaultBranch = main
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[pull]
+    rebase = true
+[url "https://github.com/"]
+    insteadOf = github:
+[url "ssh://git@github.com/"]
+    pushInsteadOf = github:
+[url "https://gitlab.com/"]
+    insteadOf = gitlab:
+[url "ssh://git@gitlab.com/"]
+    pushInsteadOf = gitlab:
+[url "ssh://aur@aur.archlinux.org/"]
+    insteadOf = aur:
+    pushInsteadOf = aur:
+[url "https://git.sr.ht/"]
+    insteadOf = srht:
+[url "ssh://git@git.sr.ht/"]
+    pushInsteadOf = srht:
+[url "https://codeberg.org/"]
+    insteadOf = codeberg:
+[url "ssh://git@codeberg.org/"]
+    pushInsteadOf = codeberg:
+[http]
+    version = "HTTP/2"
+[credential]
+    helper = cache --timeout=86400
