@@ -1,0 +1,40 @@
+[global]
+    notification_limit = 10
+
+    separator_height = 3
+    padding = 6
+    horizontal_padding = 6
+    frame_color = "#CBA6F7"
+    sort = yes
+    idle_threshold = 10
+
+    font = Fira Code 7
+    line_height = 3
+    format = "%a: <b>%s</b>\n%b\n%p"
+    alignment = center
+    show_indicators = no
+
+    enable_recursive_icon_lookup = true
+    icon_theme = Papirus-Dark
+
+    history_length = 128
+
+[urgency_low]
+    background = "#1E1E2E"
+    foreground = "#585b70"
+    frame_color = "#585b70"
+    highlight = "#585b70"
+    timeout = 4
+
+[urgency_normal]
+    background = "#1E1E2E"
+    foreground = "#CDD6F4"
+    highlight = "#CBA6F7"
+    timeout = 6
+
+[urgency_critical]
+    background = "#1E1E2E"
+    foreground = "#F38BA8"
+    frame_color = "#F38BA8"
+    highlight = "#F38BA8"
+    timeout = 8
