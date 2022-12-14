@@ -27,7 +27,7 @@ vim.opt.cursorline = true
 vim.opt.title = true
 vim.opt.number = true
 vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80,100,120"
 
 -- Code Folding
 vim.opt.foldmethod = "indent"
