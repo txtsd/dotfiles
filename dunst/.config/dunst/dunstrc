@@ -1,5 +1,5 @@
 [global]
-    notification_limit = 10
+    notification_limit = 0
 
     separator_height = 3
     padding = 6
