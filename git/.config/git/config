@@ -5,6 +5,7 @@
 [push]
     default = simple
     followTags = true
+    gpgsign = if-asked
 [color]
     ui = auto
 [diff]
@@ -28,6 +29,8 @@
 [gpg]
     program = gpg2
 [commit]
+    gpgsign = true
+[tag]
     gpgsign = true
 [format]
     signOff = yes
