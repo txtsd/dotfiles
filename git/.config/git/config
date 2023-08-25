@@ -63,3 +63,5 @@
     version = "HTTP/2"
 [credential]
     helper = cache --timeout=86400
+[checkout]
+    workers = 0
