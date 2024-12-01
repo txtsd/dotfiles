@@ -1,0 +1,1 @@
+/usr/share/mpv-notify/notify.lua
