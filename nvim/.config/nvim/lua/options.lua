@@ -1,5 +1,5 @@
 -- Indents
-local indent = 4
+local indent = 2
 vim.opt.autoindent = true
 vim.opt.expandtab = true
 vim.cmd("filetype indent on")
@@ -45,3 +45,7 @@ vim.opt.wildignore = ".pyc,.swp,__pycache__"
 -- Spellcheck
 vim.opt.spelllang = "en_us,programming,cjk"
 
+-- Whitespace
+vim.opt.list = true
+-- vim.opt.listchars = "space:·,tab:->,trail:-,nbsp:+,eol:\\u21b5"
+vim.opt.listchars = "space:·,tab:->,trail:-,nbsp:+"
