@@ -1,67 +1,138 @@
 [user]
-    email = code@ihavea.quest
-    name = txtsd
-    signingkey = 97C8848C2E4063CB
+  email = code@ihavea.quest
+  name = txtsd
+  signingkey = 97C8848C2E4063CB
 [push]
-    default = simple
-    followTags = true
-    gpgsign = if-asked
+  default = simple
+  followTags = true
+  gpgsign = if-asked
 [color]
-    ui = auto
+  ui = auto
 [diff]
-    algorithm = minimal
-    renames = copies
-    mnemonicprefix = true
-    tool = kitty
-    guitool = kitty.gui
+  algorithm = minimal
+  renames = copies
+  mnemonicprefix = true
+  tool = kitty
+  guitool = kitty.gui
+  colorMoved = default
 [difftool]
-    prompt = false
-    trustExitCode = true
+  prompt = false
+  trustExitCode = true
 [difftool "kitty"]
-    cmd = kitty +kitten diff $LOCAL $REMOTE
+  cmd = kitty +kitten diff $LOCAL $REMOTE
 [difftool "kitty.gui"]
-    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+  cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 [core]
-    editor = nvim
-    whitespace = blank-at-eol,space-before-tab
+  editor = nvim
+  whitespace = blank-at-eol,space-before-tab
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  side-by-side = true
+  navigate = true
+  hyperlinks = true
+  features = catppuccin-mocha
+  true-color = always
+[merge]
+  conflictstyle = zdiff3
+[pager]
+  blame = delta
+[include]
+  path = ~/git/catppuccin/delta/catppuccin.gitconfig
 [protocol]
-    version = 2
+  version = 2
 [gpg]
-    program = gpg2
+  program = gpg2
 [commit]
-    gpgsign = true
+  gpgsign = true
 [tag]
-    gpgsign = true
+  gpgsign = true
 [format]
-    signOff = yes
+  signOff = yes
 [init]
-    defaultBranch = main
+  defaultBranch = main
 [alias]
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [pull]
-    rebase = true
+  rebase = true
 [url "https://github.com/"]
-    insteadOf = github:
+  insteadOf = github:
 [url "ssh://git@github.com/"]
-    pushInsteadOf = github:
+  pushInsteadOf = github:
 [url "https://gitlab.com/"]
-    insteadOf = gitlab:
+  insteadOf = gitlab:
 [url "ssh://git@gitlab.com/"]
-    pushInsteadOf = gitlab:
+  pushInsteadOf = gitlab:
 [url "ssh://aur@aur.archlinux.org/"]
-    insteadOf = aur:
-    pushInsteadOf = aur:
+  insteadOf = aur:
+  pushInsteadOf = aur:
 [url "https://git.sr.ht/"]
-    insteadOf = srht:
+  insteadOf = srht:
 [url "ssh://git@git.sr.ht/"]
-    pushInsteadOf = srht:
+  pushInsteadOf = srht:
 [url "https://codeberg.org/"]
-    insteadOf = codeberg:
+  insteadOf = codeberg:
 [url "ssh://git@codeberg.org/"]
-    pushInsteadOf = codeberg:
+  pushInsteadOf = codeberg:
 [http]
-    version = "HTTP/2"
+  version = "HTTP/2"
 [credential]
-    helper = cache --timeout=86400
+  helper = cache --timeout=86400
 [checkout]
-    workers = 0
+  workers = 0
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+[maintenance]
+  repo = /home/txtsd/git/mine/pkgbuilds/ankylosaurus
+  repo = /home/txtsd/git/mine/pkgbuilds/centaur
+  repo = /home/txtsd/git/mine/ihavea.quest
+  repo = /home/txtsd/git/mine/perhaps.ihavea.quest
+  repo = /home/txtsd/git/prismlauncher/PrismLauncher
+  repo = /home/txtsd/git/prismlauncher/prismlauncher.org
+  repo = /home/txtsd/git/prismlauncher/meta
+  repo = /home/txtsd/git/prismlauncher/Themes
+  repo = /home/txtsd/git/prismlauncher/changelog-generator
+  repo = /home/txtsd/git/prismlauncher/chocolatey
+  repo = /home/txtsd/git/prismlauncher/refraction
+  repo = /home/txtsd/git/pkgbuilds/pacman
+  repo = /home/txtsd/git/pkgbuilds/llpp
+  repo = /home/txtsd/git/aur_aminvakil
+  repo = /home/txtsd/git/catppuccin/Kvantum
+  repo = /home/txtsd/git/catppuccin/bat
+  repo = /home/txtsd/git/catppuccin/btop
+  repo = /home/txtsd/git/catppuccin/cursors
+  repo = /home/txtsd/git/catppuccin/dunst
+  repo = /home/txtsd/git/catppuccin/gtk
+  repo = /home/txtsd/git/catppuccin/kitty
+  repo = /home/txtsd/git/catppuccin/neomutt
+  repo = /home/txtsd/git/catppuccin/qt5ct
+  repo = /home/txtsd/git/catppuccin/rofi
+  repo = /home/txtsd/git/catppuccin/sublime-text
+  repo = /home/txtsd/git/catppuccin/thunderbird
+  repo = /home/txtsd/git/catppuccin/waybar
+  repo = /home/txtsd/git/wine-tkg-git
+  repo = /home/txtsd/git/stable-diffusion-webui
+  repo = /home/txtsd/git/treestyletab
+  repo = /home/txtsd/git/espanso
+  repo = /home/txtsd/git/mine/DPITunnel
+  repo = /home/txtsd/git/mine/pkgbuilds/jackett
+  repo = /home/txtsd/git/mine/pkgbuilds/jackett-bin
+  repo = /home/txtsd/git/mine/pkgbuilds/jackett-mono
+  repo = /home/txtsd/git/opennox
+  repo = /home/txtsd/git/mine/pkgbuilds/mpr/prismlauncher
+  repo = /home/txtsd/git/mine/pkgbuilds/mpr/prismlauncher-bin
+  repo = /home/txtsd/git/mine/pkgbuilds/mpr/prismlauncher-git
+  repo = /home/txtsd/git/repology-rules
+[rerere]
+  enabled = true
+
+
+[includeIf "gitdir:~/git/pkgbuilds/**"]
+  path = ~/.config/git/config_AUR
+
+[includeIf "gitdir:~/git/mine/pkgbuilds/**"]
+  path = ~/.config/git/config_AUR
